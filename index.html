@@ -1,85 +1,122 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>GasTrak</title>
-
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
-	<link rel="stylesheet" href="assets/stylesheets/gt.css" />
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
-	<!--<script src="//cdn.jsdelivr.net/jquery.cookie/1.3.1/jquery.cookie.js"></script>-->
-</head>
-<body>
-<div data-role="page">
-
-	<div data-role="header">
-		<h1>GasTrak</h1>
-	</div>
-	<!-- /header -->
-	<div data-role="content" data-theme="b" style="padding-top: 0">
-		<div data-role="collapsible" data-inset="false" data-theme="c" data-content-theme="e">
-		    <h4>Important Notes</h4>
-		    <p>Cookies must be enabled and not cleared for persistant data across fill ups within 365 days. Cookies may be cleared with in the settings panel.</p>
-		    <p>For an accurate calculation, your last and current (this entry) fill up needs to be filled completely. Filling the tank up to full may be inconvenient, but data accuracy cannot be guaranteed otherwise.</p>
-		</div>
-		<form>
-		    <div data-role="fieldcontain">
-		         <label for="milesTraveled">Miles Traveled:</label>
-		         <input type="text" name="milesTraveled" id="milesTraveled" value="">
-		    </div>
-		    <div data-role="fieldcontain">
-		         <label for="gallonsUsed">Gallons Used:</label>
-		         <input type="text" data-clear-btn="true" name="gallonsUsed" id="gallonsUsed" value="">
-		    </div>
-			<div data-role="fieldcontain" style="border-style: none">
-		         <label for="pricePerGallon">Price Per Gallon:</label>
-		         <input type="text" data-clear-btn="true" name="pricePerGallon" id="pricePerGallon" value="">
-		    </div>
-		    <div data-role="collapsible" data-inset="false" data-theme="c" data-content-theme="d">
-		   		<h4>Inactive Features</h4>
-			    <div data-role="fieldcontain">
-			         <label for="gasOctane">Gas Octane:</label>
-			         <input disabled="disabled" type="text" data-clear-btn="true" name="gasOctane" id="gasOctane" value="">
-			    </div>
-			    <div data-role="fieldcontain">
-			         <label for="gasBrand">Gas Brand:</label>
-			         <input disabled="disabled" type="text" data-clear-btn="true" name="gasBrand" id="gasBrand" value="">
-			    </div>
-			</div>
-		    <br />
-    		<div class="ui-grid-a">
-			    <div class="ui-block-a"><div class="ui-bar ui-bar-c">Your MPG:</div></div>
-			    <div class="ui-block-b"><div class="ui-bar ui-bar-c">Total Price:</div></div>
-			</div>
-			<br />
-			<fieldset class="ui-grid-a">
-			    <div class="ui-block-a"><button type="submit" data-theme="b">Calculate</button></div>
-			    <div class="ui-block-b"><button type="submit" data-theme="c">Reset</button></div>
-			</fieldset>
-		</form>
-	</div>
-	<!-- /content -->
-
-	<div data-role="footer" data-theme="a">
-		<div data-role="navbar" class="nav-custom-footer">
-		    <ul>
-		        <li><a href="#" id="fuel" data-icon="custom">MPG</a></li>
-		        <li><a href="#" id="gear" data-icon="custom">Settings</a></li>
-		    </ul>
-	    </div>
-		<div class="ui-grid-b" style="text-align: center;font-size: 12px;background-color: #2D2D2D">
-		    <div class="ui-block-a"><p><a href="http://www.linkedin.com/in/jimjam" rel="external" target="_blank" style="color: #fff">Linkedin</a></div>
-		    <div class="ui-block-b"><p>By Jimmy Hsu</p></div>
-		    <div class="ui-block-c"><p><a href="https://github.com/jimmyhsu/gastrak" rel="external" target="_blank" style="color: #fff">Source</a></p></div>
-		</div><!-- /grid-b -->
-		<div class="ui-grid-b">
-			
-		</div>
-	</div>
-	<!-- /footer -->
+	<head>
+		<title>GasTrak</title>
 	
-</div><!-- /page -->
-</body>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
+		<link rel="stylesheet" href="assets/stylesheets/gt.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+		<!--<script src="//cdn.jsdelivr.net/jquery.cookie/1.3.1/jquery.cookie.js"></script>-->
+	</head>
+	<body>
+		<div data-role="page" id="mpg">
+		
+			<div data-role="header">
+				<h1>GasTrak</h1>
+			</div><!-- /header -->
+			
+			<div data-role="content" data-theme="b" style="padding-top: 0">
+				<div data-role="collapsible" data-inset="false" data-theme="c" data-content-theme="e">
+				    <h4>Important Notes</h4>
+				    <p><del>Cookies must be enabled and not cleared for persistant data across fill ups within 365 days. Cookies may be cleared with in the settings panel.</del></p>
+				    <p>Above function not yet implemented.</p>
+				    <p>For an accurate calculation, your last and current (this entry) fill up needs to be filled completely. Filling the tank up to full may be inconvenient, but data accuracy cannot be guaranteed otherwise.</p>
+				</div>
+				<form>
+				    <div data-role="fieldcontain">
+				         <label for="milesTraveled">Miles Traveled:</label>
+				         <input type="text" name="milesTraveled" id="milesTraveled" value="">
+				    </div>
+				    <div data-role="fieldcontain">
+				         <label for="gallonsUsed">Gallons Used:</label>
+				         <input type="text" data-clear-btn="true" name="gallonsUsed" id="gallonsUsed" value="">
+				    </div>
+					<div data-role="fieldcontain" style="border-style: none">
+				         <label for="pricePerGallon">Price Per Gallon:</label>
+				         <input type="text" data-clear-btn="true" name="pricePerGallon" id="pricePerGallon" value="">
+				    </div>
+				    <div data-role="collapsible" data-inset="false" data-theme="c" data-content-theme="d">
+				   		<h4>Inactive Features</h4>
+					    <div data-role="fieldcontain">
+					         <label for="gasOctane">Gas Octane:</label>
+					         <input disabled="disabled" type="text" data-clear-btn="true" name="gasOctane" id="gasOctane" value="">
+					    </div>
+					    <div data-role="fieldcontain">
+					         <label for="gasBrand">Gas Brand:</label>
+					         <input disabled="disabled" type="text" data-clear-btn="true" name="gasBrand" id="gasBrand" value="">
+					    </div>
+					</div>
+				    <br />
+		    		<div class="ui-grid-a">
+					    <div class="ui-block-a"><div class="ui-bar ui-bar-c">Your MPG:</div></div>
+					    <div class="ui-block-b"><div class="ui-bar ui-bar-c">Total Price:</div></div>
+					</div>
+					<br />
+					<fieldset class="ui-grid-a">
+					    <div class="ui-block-a"><button type="submit" data-theme="b">Calculate</button></div>
+					    <div class="ui-block-b"><button type="submit" data-theme="c">Reset</button></div>
+					</fieldset>
+				</form>
+			</div><!-- /content -->
+		
+			<div data-role="footer" data-theme="a" data-id="gastrak-fixed">
+				<div data-role="navbar" class="nav-custom-footer">
+				    <ul>
+				        <li><a href="" id="fuel" data-icon="custom" class="ui-btn-active ui-state-persist">MPG</a></li>
+				        <li><a href="#settings" id="gear" data-transition="none" data-icon="custom">Settings</a></li>
+				    </ul>
+			    </div>
+				<div class="ui-grid-b" style="text-align: center;font-size: 12px;background-color: #2D2D2D">
+				    <div class="ui-block-a"><p><a href="http://www.linkedin.com/in/jimjam" rel="external" target="_blank" style="color: #fff">Linkedin</a></div>
+				    <div class="ui-block-b"><p>By Jimmy Hsu</p></div>
+				    <div class="ui-block-c"><p><a href="https://github.com/jimmyhsu/gastrak" rel="external" target="_blank" style="color: #fff">Source</a></p></div>
+				</div><!-- /grid-b -->
+				<div class="ui-grid-b">
+					
+				</div>
+			</div><!-- /footer -->
+			
+		</div><!-- /page -->
+		
+		<div data-role="page" id="settings">
+		
+			<div data-role="header">
+				<h1>GasTrak - Settings</h1>
+			</div><!-- /header -->
+		
+			<div data-role="content">
+				<h4>Welcome to the settings page!</h4>
+				<div data-role="fieldcontain">
+			         <label for="clearCookies">Clear Cookies:</label>
+			         <button type="submit" name="clearCookies" id="clearCookies" data-theme="d">Clear Cookies</button>
+			    </div>
+			    <div data-role="fieldcontain">
+			         <label for="unused">Unused:</label>
+			         <button type="submit" name="unused" id="unused" data-theme="d">Unused</button>
+			    </div>
+			</div><!-- /content -->
+		
+			<div data-role="footer" data-theme="a" data-id="gastrak-fixed">
+				<div data-role="navbar" class="nav-custom-footer">
+				    <ul>
+				        <li><a href="#mpg" id="fuel" data-transition="none" data-icon="custom">MPG</a></li>
+				        <li><a href="" id="gear" data-icon="custom" class="ui-btn-active ui-state-persist">Settings</a></li>
+				    </ul>
+			    </div>
+				<div class="ui-grid-b" style="text-align: center;font-size: 12px;background-color: #2D2D2D">
+				    <div class="ui-block-a"><p><a href="http://www.linkedin.com/in/jimjam" rel="external" target="_blank" style="color: #fff">Linkedin</a></div>
+				    <div class="ui-block-b"><p>By Jimmy Hsu</p></div>
+				    <div class="ui-block-c"><p><a href="https://github.com/jimmyhsu/gastrak" rel="external" target="_blank" style="color: #fff">Source</a></p></div>
+				</div><!-- /grid-b -->
+				<div class="ui-grid-b">
+					
+				</div>
+			</div><!-- /footer -->
+			
+		</div><!-- /page -->
+		
+	</body>
 </html>
