@@ -39,4 +39,28 @@ Alternatively, you may post in the [facebook page](http://www.facebook.com/jh.ga
 
 ##### License
 
-Currently I have no decided on an official license, but if you could give heads up by contacting me (I'd be excited to see where it'll be used!) and a small shout out back to me that would be much appreciated.
+~~Currently I have no decided on an official license, but if you could give heads up by contacting me (I'd be excited to see where it'll be used!) and a small shout out back to me that would be much appreciated.~~
+
+Wow, was I am idiot? Open source or gtfo.
+
+    The MIT License (MIT)
+    
+    Copyright (c) <year> <copyright holders>
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
