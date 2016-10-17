@@ -1,4 +1,4 @@
-##### Gas Trak is a simple MPG calculator. Does nothing more or less— so far.
+## Gas Trak is a simple MPG calculator
 
 Current version does not save data and only has a single method of calculation.
 
